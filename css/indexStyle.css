@@ -298,11 +298,14 @@ body{
     border: 0.01rem solid #c39335;
 }
 .foot-container .foot-links{
+    display: grid;
+    grid-template-columns: auto auto;
     list-style: none;
-    margin-top: 2%;
 }
 .foot-links li{
-    padding: 10% 0;
+    padding: 0% 10%;
+    width: 100%;
+    margin-top: 10px;
 }
 .foot-links li a{
     color: #c39335;
