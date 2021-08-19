@@ -12,6 +12,9 @@
     width: 150px;
     height: 150px;
 }
+.links-container{
+    height: auto;
+}
 .links{
     display: flex;
     justify-content: center;
@@ -26,4 +29,39 @@
     font-size: 20px;
     color: #c39335;
     transition: all 0.2s ease-in-out;
+}
+.responsive-nav{
+    color: #c39335;
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width:900px){
+    .links{
+        display: block;
+    }
+    .links-container{
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background-color: #c39335;
+        transition: all 0.5s;
+    }
+    .links li{
+        margin: 2% 0;
+    }
+    .links li a{
+        color: #262626;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .responsive-nav{
+        display: block;
+    }
 }
