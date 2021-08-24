@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #f9f4ea;
 }
@@ -303,7 +306,7 @@ body{
     list-style: none;
 }
 .foot-links li{
-    padding: 0% 10%;
+    padding: 0% 5%;
     width: 100%;
     margin-top: 10px;
 }
@@ -323,5 +326,26 @@ body{
     }
     .foot-container{
         width: 100%;
+    }
+}
+
+.top-btn{
+    visibility: hidden;
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    padding: 10px;
+    background-color: #262626;
+    color: #c39335;
+    font-size: 25px;
+}
+.show-btn{
+    visibility: visible;
+}
+
+@media screen and (max-width: 800px) {
+    .top-btn{
+        bottom: 1rem;
+        right: 1.5rem;
     }
 }

@@ -7,6 +7,7 @@
     font-family: 'Raleway', sans-serif;
     /* background-color: #f8f3eb; */
     background-color: #262626;
+    transition: all 0.5s ease-in-out ;
 }
 .logo img{
     width: 150px;
@@ -38,6 +39,12 @@
     width: 40px;
     cursor: pointer;
     display: none;
+}
+.fixed-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 @media screen and (max-width:900px){
     .links{
