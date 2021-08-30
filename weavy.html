@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #messenger-container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        transition: transform, opacity;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        right: 0;
+        width: 20rem;
+        transform: translateX(20rem);
+        pointer-events: none;
+        height: 100%;
+    }
+
+    #messenger-container.open {
+        transform: none;
+        border-left: 1px solid #ccc;
+    }
+</style>
+
+<body>
+    Hello World!
+    <div id="messenger-container"></div>
+    <button class="toggle-messenger">Toggle Messenger</button>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://{weavyurl}/javascript/weavy.min.js"></script>
+
+    <script>
+
+        $(function () {
+
+            var weavy = new Weavy();
+            var space = weavy.space({ key: "global" });
+            var messenger = space.app({ key: "messenger", type: "messenger", container: "#messenger-container", open: false });
+
+            $(document).on("click", ".toggle-messenger", function () {
+                messenger.toggle();
+                $("#messenger-container").toggleClass("open");
+            });
+        });
+    </script>
+</body>
+
+</html>
