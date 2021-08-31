@@ -98,6 +98,8 @@
 }
 .item{
     text-align: center;
+    border: 1px solid #c39335;
+    border-radius: 10px;
 }
 .item img{
     border-radius: 10px;

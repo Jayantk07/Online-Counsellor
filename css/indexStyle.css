@@ -195,6 +195,9 @@ body{
     color: #262626;
     margin-bottom: 5%;
 }
+.uni-text p:nth-child(3){
+    text-align: center;
+}
 .uni-img img{
     width: 600px;
 }
@@ -271,6 +274,7 @@ body{
     justify-content: space-evenly;
     align-items: center;
     height: 40vh;
+    margin-top: 5%;
     background: #262626;
     color: #c39335;
 }
