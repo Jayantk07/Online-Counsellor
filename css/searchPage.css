@@ -80,3 +80,72 @@
     max-width: 50%;
     height: auto;
 }
+
+/* cards */
+
+.cards{
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+}
+
+.owl-prev, .owl-next{
+    width: 25px;
+    transform: scale(2) !important;
+}
+.owl-prev:hover, .owl-next:hover{
+    background: #cfa85d !important;
+}
+.item{
+    text-align: center;
+}
+.item img{
+    border-radius: 10px;
+}
+.item h3{
+    padding: 2%;
+    font-size: 30px;
+    color: #c39335;
+    border-bottom: 2px solid #c39335;
+}
+.item p{
+    padding: 2%;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    color: #262626;
+}
+.courses{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.courses li{
+    font-size: 18px;
+    padding: 2%;
+}
+.fees{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fees p{
+    font-size: 15px;
+    color: #8a8a8a;
+}
+.ranking{
+    color: #8a8a8a !important;
+    font-size: 18px !important;
+    text-align: center !important;
+}
+.college_website{
+    font-size: 18px !important;
+    text-align: center !important;
+}
+.college_website a{
+    color: #c39335;
+}
+.college_website a:hover{
+    color: #e1c99a;
+}

@@ -25,6 +25,12 @@
 .links li{
     padding: 0px 70px;
 }
+.links li:nth-child(3) a{
+    padding:0 10%;
+}
+.links li:nth-child(3) span{
+    color: #fff;
+}
 .links li a{
     text-decoration: none;
     font-size: 20px;
@@ -45,6 +51,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1000;
 }
 @media screen and (max-width:900px){
     .links{
@@ -66,6 +73,10 @@
     .links li a{
         color: #fff;
         font-size: 18px;
+        padding: 0% 5% 0% 0% !important;
+    }
+    .links li span{
+        margin-right: 5%;
     }
     .responsive-nav{
         display: block;

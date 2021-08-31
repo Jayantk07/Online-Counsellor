@@ -265,8 +265,7 @@ body{
 }
 
 
-<<<<<<< HEAD
-=======
+
 .footer{
     display: flex;
     justify-content: space-evenly;
@@ -331,7 +330,6 @@ body{
     }
 }
 
->>>>>>> 74db5dae319c0ca6712cc99609447b2dec5f3de0
 .top-btn{
     visibility: hidden;
     position: fixed;
