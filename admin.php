@@ -1,3 +1,12 @@
+<?php
+    include "database.php";
+
+    session_start();
+    if(!isset($_SESSION['ad_email'])){
+    header('location:ad_login.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +34,7 @@
             <ul class="links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="searchPage.html">Find Universities</a></li>
-                <li><a href="login.html">Login</a><span>|</span><a href="register.html">Register</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
         <button class="responsive-nav">
@@ -34,10 +43,20 @@
     </section>
     <section class="hero" id="home">
         <div class="hero-text">
-            <h3>Online Counsellor</h3>
-            <p><span>W</span>e all know how difficult it is to choose just the right path,and when it is about Education
-                we really need good and reliable information to be able to select the best course for ourselves.
-            </p>
+            <form>
+                <label for="collegename" style="color:#c39335;">College Name:</label><br>
+                <input type="text" id="formtext" name="username" size="50" style="height: 25px;"><br>
+                <label for="courses" style="color:#c39335;">Courses Offered:</label><br>
+                <input type="password" id="formtext" name="pwd" size="50" style="height: 25px;"><br>
+                <label for="courses" style="color:#c39335;">Stream:</label><br>
+                <input type="password" id="formtext" name="pwd" size="50" style="height: 25px;"><br>
+                <label for="courses" style="color:#c39335;">Fees:</label><br>
+                <input type="password" id="formtext" name="pwd" size="50" style="height: 25px;"><br>
+                <label for="courses" style="color:#c39335;">Rank:</label><br>
+                <input type="password" id="formtext" name="pwd" size="50" style="height: 25px;"><br>
+                <label for="courses" style="color:#c39335;">College Link:</label><br>
+                <input type="password" id="formtext" name="pwd" size="50" style="height: 25px;"><br>
+              </form>
         </div>
         <div class="hero-img">
             <img src="./images/header_img.svg" alt="Counsellor">
@@ -49,30 +68,6 @@
             d="M0,128L80,117.3C160,107,320,85,480,90.7C640,96,800,128,960,128C1120,128,1280,96,1360,80L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
         </path>
     </svg>
-    <section class="info">
-        <div class="info-img">
-            <img src="./images/info_img.svg" alt="Info">
-        </div>
-        <div class="info-text">
-            <h3>Lorem</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque tempora expedita fuga rem praesentium
-                laborum. Reprehenderit consequatur aspernatur minus quos quam nemo autem sit. Placeat ab iusto
-                blanditiis recusandae dignissimos, assumenda enim!</p>
-        </div>
-    </section>
-    <section class="university">
-        <div class="uni-text">
-            <h3>Lorem</h3>
-            <p>A counselor is a professional who works in primary schools or secondary schools to provide academic,
-                career, college access/affordability/admission, and social-emotional competencies to all students
-                through a counseling program</p>
-            <p>Want to know more about us?</p>
-            <a href="#" class="btn">Click Here</a>
-        </div>
-        <div class="uni-img">
-            <img src="./images/search.svg" alt="Search">
-        </div>
-    </section>
 
     <footer class="footer">
         <div class="foot-container">

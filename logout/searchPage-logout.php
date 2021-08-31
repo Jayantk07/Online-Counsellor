@@ -1,3 +1,13 @@
+<?php
+    include "../database.php";
+
+    session_start();
+    if(!isset($_SESSION['email'])){
+    header('location: ../login.php');
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,9 +51,9 @@
         </div>
         <div class="links-container">
             <ul class="links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../searchPage.html">Find Universities</a></li>
-                <li><a href="../login.html">Logout</a></li>
+                <li><a href="./index-logout.php">Home</a></li>
+                <li><a href="./searchPage-logout.php">Find Universities</a></li>
+                <li><a href="../logout.php">Logout</a></li>
             </ul>
         </div>
         <button class="responsive-nav">

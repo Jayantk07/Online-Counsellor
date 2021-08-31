@@ -1,3 +1,8 @@
+<?php
+	include "database.php";
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -19,21 +24,22 @@
 	<div class="wrapper">
 		<div class="inner">
 			<img src="./images/image-1.png" alt="" class="image-1">
-			<form action="">
+			<form action="validation.php" method="POST">
 				<h3>Login</h3>
 				<div class="form-holder">
 					<span class="lnr lnr-envelope"></span>
-					<input type="email" class="form-control" placeholder="Mail" required>
+					<input type="email" name="email" class="form-control" placeholder="Mail" required>
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-lock"></span>
-					<input type="password" class="form-control password" placeholder="Password" required>
+					<input type="password" name="password" class="form-control password" placeholder="Password" required>
 				</div>
 				<span class="lnr lnr-eye login-eye" onclick="togglePass()"></span>
 				<button>
 					<span>Login</span>
 				</button>
-				<p>Don't have an account? <a href="register.html"> Register Now! </a></p>
+				<p>Don't have an account? <a href="register.php"> Register Now! </a></p>
+				<p>Login as ADMIN <a href="ad_login.php"> Admin Login </a></p>
 			</form>
 			<img src="./images/image-2.png" alt="" class="image-2">
 		</div>

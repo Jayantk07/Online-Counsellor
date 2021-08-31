@@ -1,3 +1,7 @@
+<?php 
+	include "database.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,34 +23,34 @@
 	<div class="wrapper">
 		<div class="inner">
 			<img src="./images/image-1.png" alt="" class="image-1">
-			<form action="">
+			<form action="registration.php" method="POST">
 				<h3>New Account?</h3>
 				<div class="form-holder">
 					<span class="lnr lnr-user"></span>
-					<input type="text" class="form-control" placeholder="Username" required>
+					<input type="text" name="uname" class="form-control" placeholder="Username" required>
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-phone-handset"></span>
-					<input type="text" class="form-control" placeholder="Phone Number" required>
+					<input type="text" name="number" class="form-control" placeholder="Phone Number" required>
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-envelope"></span>
-					<input type="email" class="form-control" placeholder="Mail" required>
+					<input type="email" name="email" class="form-control" placeholder="Mail" required>
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-lock"></span>
-					<input type="password" class="form-control password" placeholder="Password" required>
+					<input type="password" name="password" class="form-control password" placeholder="Password" required>
 				</div>
 				<span class="lnr lnr-eye" onclick="togglePass()"></span>
 				<div class="form-holder">
 					<span class="lnr lnr-lock"></span>
-					<input type="password" class="form-control confirm-password" placeholder="Confirm Password" required>
+					<input type="password" name="cpassword" class="form-control confirm-password" placeholder="Confirm Password" required>
 				</div>
 				<span class="lnr lnr-eye confirm" onclick="confirmPass()"></span>
 				<button>
 					<span>Register</span>
 				</button>
-				<p>Already have an account? <a href="login.html"> Login! </a></p>
+				<p>Already have an account? <a href="login.php"> Login! </a></p>
 			</form>
 			<img src="./images/image-2.png" alt="" class="image-2">
 		</div>
