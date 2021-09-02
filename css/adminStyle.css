@@ -1,0 +1,53 @@
+
+.hero-text{
+    width: 100%;
+}
+.entries{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+label{
+    color: #fff;
+}
+input{
+    width: 50%;
+    height: 30px;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    border: none;
+    caret-color: #c39335;
+    text-align: center;
+    font-weight: 900;
+    color: #c39335;
+}
+input:focus, select:focus{
+    outline: none;
+}
+select{
+    margin-bottom: 2%;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+input[type= "button"]{
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+    .entries{
+        margin-top: 8%;
+    }
+    input,select{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .hero {
+        height: 100vh !important;
+    }
+}
