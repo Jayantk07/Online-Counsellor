@@ -56,6 +56,8 @@
                 <input type="password" id="formtext" name="pwd" size="50" style="height: 25px;"><br>
                 <label for="courses" style="color:#c39335;">College Link:</label><br>
                 <input type="password" id="formtext" name="pwd" size="50" style="height: 25px;"><br>
+                <label for="imageurl" style="color:#c39335;">Image URL:</label><br>
+                <input type="text" id="formtext" name="url_image" size="50" style="height: 25px;"><br>
               </form>
         </div>
         <div class="hero-img">
