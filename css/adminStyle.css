@@ -1,18 +1,27 @@
-
-.hero-text{
-    width: 100%;
+.hero {
+    height: 65vh;
 }
-.entries{
+
+.hero-text {
+    width: 100%;
+    border: 1px solid #c39335;
+    border-radius: 15px;
+    margin-right: 2%;
+}
+
+.entries {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 2%;
 }
-label{
+
+label {
     color: #fff;
 }
-input{
+
+input {
     width: 50%;
     height: 30px;
     margin-bottom: 2%;
@@ -23,30 +32,36 @@ input{
     font-weight: 900;
     color: #c39335;
 }
-input:focus, select:focus{
+
+input:focus,
+select:focus {
     outline: none;
 }
-select{
+
+select {
     margin-bottom: 2%;
     width: 50%;
     height: 30px;
     border-radius: 10px;
     border: none;
 }
-input[type= "button"]{
+
+input[type="button"] {
     cursor: pointer;
+    margin-top: 2%;
 }
 
 @media screen and (max-width:800px) {
-    .entries{
+    .entries {
         margin-top: 8%;
     }
-    input,select{
+    input,
+    select {
         width: 70%;
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
     .hero {
         height: 100vh !important;
     }

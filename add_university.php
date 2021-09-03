@@ -1,3 +1,13 @@
+<?php
+    include "database.php";
+
+    session_start();
+    if(!isset($_SESSION['ad_email'])){
+    header('location:ad_login.php');
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,10 +34,10 @@
         </div>
         <div class="links-container">
             <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="searchPage.html">Find Universities</a></li>
+                <li><a href="ad_logout/index-logout.php">Home</a></li>
+                <li><a href="ad_logout/searchPage-logout.html">Find Universities</a></li>
                 <li><a href="#">Add Universities</a></li>
-                <li><a href="../logout.php">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
         <button class="responsive-nav">
@@ -38,29 +48,33 @@
         <div class="hero-text">
             
             
-            <form>
+            <form method="POST" action="#">
                 <div class="entry">
                     
                    
                     <div class="entries">
                         <label for="collegename">College Name:</label>
-                        <input type="text" id="formtext" name="username">
+                        <input type="text" id="formtext" name="name">
 
                         <label for="courses">Courses Offered:</label>
-                        <select id="cars" name="cars">
+                        <select id="course" name="course">
                             <option value="Science">Science</option>
                             <option value="Arts">Arts</option>
                             <option value="Commerce">Commerce</option>
                         </select>
-                        <label for="courses">Stream:</label>
-                        <input id="formtext" name="pwd">
-                        <label for="courses">Fees:</label>
-                        <input id="formtext" name="pwd">
-                        <label for="courses">Rating:</label>
-                        <input id="formtext" name="pwd">
-                        <label for="courses">College Link:</label>
-                        <input id="formtext" name="pwd">
-                        <input type="button" value="Submit">
+                        <label for="stream">Stream:</label>
+                        <input id="formtext" name="stream">
+                        <label for="fees" >Fees:</label>
+                        <input id="formtext" name="fees">
+                        <label for="rating" >Rating:</label>
+                        <input id="formtext" name="rating">
+                        <label for="collegeurl" >College Link:</label>
+                        <input id="formtext" name="clg_url">
+                        <label for="imageurl">Image Link:</label>
+                        <input id="formtext" name="image_url">
+                        <div class="form-group">
+                            <input type="submit" name="Submit" value="Submit" class="btn btn-success">
+                        </div>
                     </div>
                 </div>
             </form>
@@ -69,6 +83,44 @@
             <img src="./images/header_img.svg" alt="Counsellor">
         </div>
     </section>
+
+    <?php
+            
+            if(isset($_POST["Submit"]))
+            {
+                $courseName=$_POST["course"];
+                mysqli_query($link,"insert into university values (NULL, '$_POST[name]' , '$_POST[course]', '$_POST[stream]', '$_POST[fees]', '$_POST[rating]', '$_POST[clg_url]', '$_POST[image_url]')") or die(mysqli_error($link));
+
+                $loop=0;
+                    $count=0;
+                    $res=mysqli_query($link, "select * from university order by id asc") or die(mysqli_error($link));
+                    $count=mysqli_num_rows($res);
+
+                    if($count==0)
+                    {
+
+                    }
+                    else{
+                        while($row=mysqli_fetch_array($res))
+                        {
+                            $loop=$loop+1;
+                            mysqli_query($link,"update university set id='$loop' where id=$row[id]");
+                        }
+                    }
+
+                    $loop=$loop+1;
+
+                ?>
+                <script type="text/javascript">
+                    alert("University added SUCCESSFULLY!");
+                    window.location="add_university.php";
+                </script>
+                <?php
+
+            }
+
+        ?>
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
         <!-- f8f3eb -->
         <path fill="#262626" fill-opacity="1"

@@ -16,7 +16,7 @@ $num = mysqli_num_rows($result);
 
 if($num == 1){
     $_SESSION['ad_email'] = $ad_email;
-    header('location:admin.php');
+    header('location:add_university.php');
 }
 else{
     echo '<script type="text/javascript">
