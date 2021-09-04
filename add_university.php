@@ -35,7 +35,7 @@
         <div class="links-container">
             <ul class="links">
                 <li><a href="ad_logout/index-logout.php">Home</a></li>
-                <li><a href="ad_logout/searchPage-logout.html">Find Universities</a></li>
+                <li><a href="ad_logout/searchPage-logout.php">Find Universities</a></li>
                 <li><a href="#" style="padding: 0 0;">Add Universities</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
