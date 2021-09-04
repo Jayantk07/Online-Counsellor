@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./css/indexStyle.css">
     <link rel="stylesheet" href="./css/footStyle.css">
     <link rel="stylesheet" href="./css/adminStyle.css">
-    <title>Home</title>
+    <title>Add Universities</title>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
             <ul class="links">
                 <li><a href="ad_logout/index-logout.php">Home</a></li>
                 <li><a href="ad_logout/searchPage-logout.html">Find Universities</a></li>
-                <li><a href="#">Add Universities</a></li>
+                <li><a href="#" style="padding: 0 0;">Add Universities</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
@@ -46,15 +46,15 @@
     </section>
     <section class="hero" id="home">
         <div class="hero-text">
-            
-            
+
+
             <form method="POST" action="#">
                 <div class="entry">
-                    
-                   
+
+
                     <div class="entries">
                         <label for="collegename">College Name:</label>
-                        <input type="text" id="formtext" name="name">
+                        <input type="text" id="formtext" name="name" class="input-entries">
 
                         <label for="courses">Courses Offered:</label>
                         <select id="course" name="course">
@@ -63,15 +63,15 @@
                             <option value="Commerce">Commerce</option>
                         </select>
                         <label for="stream">Stream:</label>
-                        <input id="formtext" name="stream">
-                        <label for="fees" >Fees:</label>
-                        <input id="formtext" name="fees">
-                        <label for="rating" >Rating:</label>
-                        <input id="formtext" name="rating">
-                        <label for="collegeurl" >College Link:</label>
-                        <input id="formtext" name="clg_url">
+                        <input id="formtext" name="stream" class="input-entries">
+                        <label for="fees">Fees:</label>
+                        <input id="formtext" name="fees" class="input-entries">
+                        <label for="rating">Rating:</label>
+                        <input id="formtext" name="rating" class="input-entries">
+                        <label for="collegeurl">College Link:</label>
+                        <input id="formtext" name="clg_url" class="input-entries">
                         <label for="imageurl">Image Link:</label>
-                        <input id="formtext" name="image_url">
+                        <input id="formtext" name="image_url" class="input-entries">
                         <div class="form-group">
                             <input type="submit" name="Submit" value="Submit" class="btn btn-success">
                         </div>

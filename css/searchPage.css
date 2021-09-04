@@ -15,7 +15,6 @@
     width: 70%;
     margin: auto;
     display: grid;
-    grid-template-columns: auto auto;
     place-items: center;
 }
 .factors{

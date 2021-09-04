@@ -21,7 +21,7 @@ label {
     color: #fff;
 }
 
-input {
+.input-entries{
     width: 50%;
     height: 30px;
     margin-bottom: 2%;
@@ -46,16 +46,55 @@ select {
     border: none;
 }
 
-input[type="button"] {
+input[type="submit"] {
     cursor: pointer;
     margin-top: 2%;
+    margin-left: -70%;
+    background-color: #c39335;
+    color: #fff;
+    padding: 0 70%;
+}
+@media screen and (max-width:1200px) {
+    .links {
+        display: block;
+    }
+
+    .links-container {
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background-color: #c39335;
+        transition: all 0.5s;
+    }
+
+    .links li {
+        margin: 2% 0;
+    }
+
+    .links li a {
+        color: #fff;
+        font-size: 18px;
+        padding: 0% 5% 0% 0% !important;
+        margin-bottom: 2%;
+    }
+
+    .links li span {
+        margin-right: 5%;
+    }
+
+    .responsive-nav {
+        display: block;
+    }
 }
 
 @media screen and (max-width:800px) {
     .entries {
         margin-top: 8%;
     }
-    input,
+    .input-entries,
     select {
         width: 70%;
     }
