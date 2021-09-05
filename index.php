@@ -24,7 +24,7 @@
         <div class="links-container">
             <ul class="links">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="searchPage.html">Find Universities</a></li>
+                <li><a href="searchPage.php">Find Universities</a></li>
                 <li><a href="login.php">Login</a><span>|</span><a href="register.php">Register</a></li>
             </ul>
         </div>

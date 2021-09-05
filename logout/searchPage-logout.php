@@ -1,31 +1,32 @@
 <?php
-include "../database.php";
 
-session_start();
-if(!isset($_SESSION['email'])){
-header('location: ../login.php');
-}
+    include "../database.php";
+
+    session_start();
+    if(!isset($_SESSION['email'])){
+    header('location: ../login.php');
+    }
 
 
-if(isset($_POST['search']))
-{
-    $courseToSearch = $_POST['courseToSearch'];
-    $query = "SELECT * FROM `university` WHERE CONCAT(`course`) LIKE '%".$courseToSearch."%'";
-    $search_course = courseFilter($query);
+    if(isset($_POST['search']))
+    {
+        $courseToSearch = $_POST['courseToSearch'];
+        $query = "SELECT * FROM `university` WHERE CONCAT(`course`) LIKE '%".$courseToSearch."%'";
+        $search_course = courseFilter($query);
 
-}
+    }
 
-else{
+    else{
     $query = "SELECT * FROM `university`";
     $search_course = courseFilter($query);
-}
+    }
 
-function courseFilter($query)
-{
-    $connect = mysqli_connect("localhost", "root", "", "build_tmrw_hackathon");
-    $filter_course = mysqli_query($connect, $query);
-    return $filter_course;
-}
+    function courseFilter($query)
+    {
+        $connect = mysqli_connect("localhost", "root", "", "build_tmrw_hackathon");
+        $filter_course = mysqli_query($connect, $query);
+        return $filter_course;
+    }
 
 ?> 
 
@@ -58,24 +59,24 @@ function courseFilter($query)
     crossorigin="anonymous" />
 
 
-<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="./css/navstyle.css">
-<link rel="stylesheet" href="./css/indexStyle.css">
-<link rel="stylesheet" href="./css/footStyle.css">
-<link rel="stylesheet" href="./css/searchPage.css">
+<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="../css/navstyle.css">
+<link rel="stylesheet" href="../css/indexStyle.css">
+<link rel="stylesheet" href="../css/footStyle.css">
+<link rel="stylesheet" href="../css/searchPage.css">
 <title>Home</title>
 </head>
 
 <body>
 <section class="navbar">
     <div class="logo">
-        <img src="./images/Logo.png" alt="Logo">
+        <img src="../images/Logo.png" alt="Logo">
     </div>
     <div class="links-container">
         <ul class="links">
-        <li><a href="./index-logout.php">Home</a></li>
-                <li><a href="./searchPage-logout.php">Find Universities</a></li>
-                <li><a href="../logout.php">Logout</a></li>
+            <li><a href="./index-logout.php">Home</a></li>
+            <li><a href="./searchPage-logout.php">Find Universities</a></li>
+            <li><a href="../logout.php">Logout</a></li>
         </ul>
     </div>
     <button class="responsive-nav">
@@ -84,15 +85,15 @@ function courseFilter($query)
 </section>
 
 <div class="title" id="home">
-    <img src="./images/Decorative-Border-Divider.svg" alt="Border">
+    <img src="../images/Decorative-Border-Divider.svg" alt="Border">
     <h3>Find your dream Universities!!</h3>
-    <img src="./images/Decorative-Border-Divider.svg" alt="Border">
+    <img src="../images/Decorative-Border-Divider.svg" alt="Border">
 </div>
 
 <!-- Form  -->
 
 <div class="search-form">
-    <form action="#" method="POST" class="form">
+    <form action="searchPage_1.php" method="POST" class="form">
         <div class="factors">
             <label for="">Course</label>
             <input type="text" name="courseToSearch">
@@ -107,11 +108,12 @@ function courseFilter($query)
 
 <!-- divider -->
 <div class="divider">
-    <img src="./images/Vintage-Decorative-Divider.svg" alt="divider" class="divider-img">
+    <img src="../images/Vintage-Decorative-Divider.svg" alt="divider" class="divider-img">
 </div>
 
 <!-- card slider -->
 <div class="cards">
+    <h3 style="text-align:center; font-size:35px; color:#c39335">Some of the Best Colleges!</h3> <br>
     <div class="owl-carousel owl-theme">
         <div class="item">
             <img src="https://images.unsplash.com/flagged/photo-1554473675-d0904f3cbf38?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbGxlZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
@@ -217,55 +219,32 @@ function courseFilter($query)
         </div>
     </div>
 </div>
-
-
-<div class="database-cards show-cards">
-    <div class="database-item">
+<!-- 
+    <div class="database-cards show-cards">
         <?php while($row = mysqli_fetch_array($search_course)): ?>
-
-            <img src="<?php echo $row['image_url'] ?>" alt="">
-            <h3><?php echo $row['name'] ?></h3>
-            <p>Course Offered:</p>
-            <ul class="courses">
-                <li><?php echo $row['course'] ?></li>
-            </ul>
-            <div class="fees">
-                <p><?php echo $row['stream1'] ?></p>
-                <span>&#x20b9 <?php echo $row['fees'] ?></span>
+            <div class="database-item">
+                    <img class="img" src="<?php echo $row['image_url'] ?>" alt="">
+                    <h3><?php echo $row['name'] ?></h3>
+                    <p>Course Offered:</p>
+                    <ul class="courses">
+                        <li><?php echo $row['course'] ?></li>
+                    </ul>
+                    <div class="fees">
+                        <p><?php echo $row['stream1'] ?></p>
+                        <span>&#x20b9 <?php echo $row['fees'] ?></span>
+                    </div>
+                    <p class="ranking">Rating : <?php echo $row['rating'] ?> <i class="fas fa-star"></i></p>
+                    <p class="college_website">For more details visit: <a href="<?php echo $row['clg_url'] ?>"><?php echo $row['clg_url'] ?></a></p>
             </div>
-            <p class="ranking">Rating : <?php echo $row['rating'] ?> <i class="fas fa-star"></i></p>
-            <p class="college_website">For more details visit: <a href="<?php echo $row['clg_url'] ?>"><?php echo $row['clg_url'] ?></a></p>
-            <?php endwhile; ?>
-    </div>
-</div>
+        <?php endwhile; ?>
+    </div> -->
 
-<!-- <div class="cards">
-    <div class="owl-carousel owl-theme">
-        <div class="item">
 
-            <?php while($row = mysqli_fetch_array($search_course)): ?>
-
-            <img src="<?php echo $row['image_url'] ?>" alt="">
-            <h3><?php echo $row['name'] ?></h3>
-            <p>Course Offered:</p>
-            <ul class="courses">
-                <li><?php echo $row['course'] ?></li>
-            </ul>
-            <div class="fees">
-                <p><?php echo $row['stream1'] ?></p>
-                <span>&#x20b9 <?php echo $row['fees'] ?></span>
-            </div>
-            <p class="ranking">Rating : <?php echo $row['rating'] ?> <i class="fas fa-star"></i></p>
-            <p class="college_website">For more details visit: <a href="<?php echo $row['clg_url'] ?>"><?php echo $row['clg_url'] ?></a></p>
-            <?php endwhile; ?>
-        </div>
-    </div>
-</div> -->
 
 
 <footer class="footer">
     <div class="foot-container">
-        <img src="./images/Logo.png" alt="Logo">
+        <img src="../images/Logo.png" alt="Logo">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, quae!</p>
     </div>
     <hr>
@@ -273,8 +252,8 @@ function courseFilter($query)
         <h3>Quick Links</h3>
         <hr>
         <ul class="foot-links">
-            <li> <a href="index.html"> Home</a></li>
-            <li> <a href="searchPage.html"> Find Universities</a></li>
+            <li> <a href="index-logout.php"> Home</a></li>
+            <li> <a href="searchPage-logout.php"> Find Universities</a></li>
             <li> <a href="#"> About Us</a></li>
             <li> <a href="#"> Team</a></li>
         </ul>
@@ -283,7 +262,7 @@ function courseFilter($query)
 <a href="#home" class="top-btn">
     <i class="fas fa-arrow-up"></i>
 </a>
-<script src="./js/index.js"></script>
+<script src="../js/index.js"></script>
 <!-- Jquery -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -322,7 +301,7 @@ function courseFilter($query)
     const searchBtn = document.querySelector(".searchBtn");
     const databaseCards = document.querySelector(".database-cards");
     const cards = document.querySelector(".cards");
-    searchBtn.addEventListener("click", function(){
+    searchBtn.addEventListener("click", function(e){
         databaseCards.classList.add("show-cards");
         cards.classList.add("remove-cards");
     });

@@ -88,7 +88,7 @@ function courseFilter($query)
 <!-- Form  -->
 
 <div class="search-form">
-    <form action="searchPage_1.php" method="POST" class="form">
+    <form action="#" method="POST" class="form">
         <div class="factors">
             <label for="">Course</label>
             <input type="text" name="courseToSearch">
@@ -106,115 +106,6 @@ function courseFilter($query)
     <img src="./images/Vintage-Decorative-Divider.svg" alt="divider" class="divider-img">
 </div>
 
-<!-- card slider -->
-<div class="cards">
-    <h3 style="text-align:center; font-size:35px; color:#c39335">Some of the Best Colleges!</h3> <br>
-    <div class="owl-carousel owl-theme">
-        <div class="item">
-            <img src="https://images.unsplash.com/flagged/photo-1554473675-d0904f3cbf38?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbGxlZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="">
-            <h3>College 1 </h3>
-            <p>Courses Offered:</p>
-            <ul class="courses">
-                <li>Science</li>
-                <li>Commerce</li>
-                <li>Arts</li>
-            </ul>
-            <div class="fees">
-                <p>B.E/B.Tech- First Year</p>
-                <span>&#x20b9 150</span>
-            </div>
-            <p class="ranking">Ranked 1 out of 200 NIRF</p>
-            <p class="college_website">For more details visit: <a href="#">College Name</a></p>
-        </div>
-        <div class="item">
-            <img src="https://images.unsplash.com/flagged/photo-1554473675-d0904f3cbf38?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbGxlZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="">
-            <h3>College 2 </h3>
-            <p>Courses Offered:</p>
-            <ul class="courses">
-                <li>Science</li>
-                <li>Commerce</li>
-                <li>Arts</li>
-            </ul>
-            <div class="fees">
-                <p>B.E/B.Tech- First Year</p>
-                <span>&#x20b9 150</span>
-            </div>
-            <p class="ranking">Ranked 1 out of 200 NIRF</p>
-            <p class="college_website">For more details visit: <a href="#">College Name</a></p>
-        </div>
-        <div class="item">
-            <img src="https://images.unsplash.com/photo-1595113229230-5f285a65dd18?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGNvbGxlZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="">
-            <h3>College 3 </h3>
-            <p>Courses Offered:</p>
-            <ul class="courses">
-                <li>Science</li>
-                <li>Commerce</li>
-                <li>Arts</li>
-            </ul>
-            <div class="fees">
-                <p>B.E/B.Tech- First Year</p>
-                <span>&#x20b9 150</span>
-            </div>
-            <p class="ranking">Ranked 1 out of 200 NIRF</p>
-            <p class="college_website">For more details visit: <a href="#">College Name</a></p>
-        </div>
-        <div class="item">
-            <img src="https://images.unsplash.com/photo-1595113229230-5f285a65dd18?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGNvbGxlZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="">
-            <h3>College 4 </h3>
-            <p>Courses Offered:</p>
-            <ul class="courses">
-                <li>Science</li>
-                <li>Commerce</li>
-                <li>Arts</li>
-            </ul>
-            <div class="fees">
-                <p>B.E/B.Tech- First Year</p>
-                <span>&#x20b9 150</span>
-            </div>
-            <p class="ranking">Ranked 1 out of 200 NIRF</p>
-            <p class="college_website">For more details visit: <a href="#">College Name</a></p>
-        </div>
-        <div class="item">
-            <img src="https://images.unsplash.com/flagged/photo-1554473675-d0904f3cbf38?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbGxlZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="">
-            <h3>College 5 </h3>
-            <p>Courses Offered:</p>
-            <ul class="courses">
-                <li>Science</li>
-                <li>Commerce</li>
-                <li>Arts</li>
-            </ul>
-            <div class="fees">
-                <p>B.E/B.Tech- First Year</p>
-                <span>&#x20b9 150</span>
-            </div>
-            <p class="ranking">Ranked 1 out of 200 NIRF</p>
-            <p class="college_website">For more details visit: <a href="#">College Name</a></p>
-        </div>
-        <div class="item">
-            <img src="https://images.unsplash.com/photo-1595113229230-5f285a65dd18?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGNvbGxlZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="">
-            <h3>College 6 </h3>
-            <p>Courses Offered:</p>
-            <ul class="courses">
-                <li>Science</li>
-                <li>Commerce</li>
-                <li>Arts</li>
-            </ul>
-            <div class="fees">
-                <p>B.E/B.Tech- First Year</p>
-                <span>&#x20b9 150</span>
-            </div>
-            <p class="ranking">Ranked 1 out of 200 NIRF</p>
-            <p class="college_website">For more details visit: <a href="#">College Name</a></p>
-        </div>
-    </div>
-</div>
-<!-- 
     <div class="database-cards show-cards">
         <?php while($row = mysqli_fetch_array($search_course)): ?>
             <div class="database-item">
@@ -232,7 +123,7 @@ function courseFilter($query)
                     <p class="college_website">For more details visit: <a href="<?php echo $row['clg_url'] ?>"><?php echo $row['clg_url'] ?></a></p>
             </div>
         <?php endwhile; ?>
-    </div> -->
+    </div>
 
 
 
@@ -247,8 +138,8 @@ function courseFilter($query)
         <h3>Quick Links</h3>
         <hr>
         <ul class="foot-links">
-            <li> <a href="index.html"> Home</a></li>
-            <li> <a href="searchPage.html"> Find Universities</a></li>
+            <li> <a href="index.php"> Home</a></li>
+            <li> <a href="searchPage.php"> Find Universities</a></li>
             <li> <a href="#"> About Us</a></li>
             <li> <a href="#"> Team</a></li>
         </ul>

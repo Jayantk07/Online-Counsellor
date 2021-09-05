@@ -1,34 +1,40 @@
-.title{
+.title {
     text-align: center;
     color: #c39335;
     font-size: 30px;
     padding: 2%;
 }
-.title img{
+
+.title img {
     max-width: 50%;
     height: auto;
 }
-.search-form{
+
+.search-form {
     width: 100%;
 }
-.form{
+
+.form {
     width: 70%;
     margin: auto;
     display: grid;
     place-items: center;
 }
-.factors{
+
+.factors {
     padding: 2%;
     width: 80%;
 }
-.factors label{
+
+.factors label {
     display: block;
     text-align: center;
     font-size: 25px;
     font-weight: 900;
     color: #c39335;
 }
-.factors input[type = "text"]{
+
+.factors input[type="text"] {
     width: 100%;
     height: 30px;
     border-radius: 10px;
@@ -39,13 +45,16 @@
     font-size: 15px;
     text-align: center;
 }
-.factors input[type = "text"]:focus{
+
+.factors input[type="text"]:focus {
     outline: none;
 }
-.search-container{
+
+.search-container {
     text-align: center;
 }
-.searchBtn{
+
+.searchBtn {
     width: 120px;
     height: 30px;
     border: none;
@@ -54,105 +63,123 @@
     background-color: #c39335;
     font-size: 15px;
     cursor: pointer;
-    margin: 2%  0;
+    margin: 2% 0;
     transition: all 0.2s ease-in-out;
 }
-.searchBtn:hover{
+
+.searchBtn:hover {
     background-color: #cfa85d;
 }
 
-
-@media screen and (max-width: 600px){
-    .form{
+@media screen and (max-width: 600px) {
+    .form {
         grid-template-columns: auto;
     }
 }
 
-
-.divider{
+.divider {
     width: 90%;
     margin: auto;
     display: grid;
     place-items: center;
 }
-.divider-img{
+
+.divider-img {
     max-width: 50%;
     height: auto;
 }
 
+
 /* cards */
 
-.cards{
+.cards {
     width: 90%;
     margin: auto;
     padding: 2%;
 }
 
-.owl-prev, .owl-next{
+.owl-prev,
+.owl-next {
     width: 25px;
     transform: scale(2) !important;
 }
-.owl-prev:hover, .owl-next:hover{
+
+.owl-prev:hover,
+.owl-next:hover {
     background: #cfa85d !important;
 }
-.item{
+
+.item {
     text-align: center;
     border: 1px solid #c39335;
     border-radius: 10px;
 }
-.item img, .database-item img{
+
+.item img,
+.database-item img {
     border-radius: 10px;
 }
-.item h3 ,.database-item h3{
+
+.item h3,
+.database-item h3 {
     padding: 2%;
     font-size: 30px;
     color: #c39335;
     border-bottom: 2px solid #c39335;
 }
-.item p,.database-item p{
+
+.item p,
+.database-item p {
     padding: 2%;
     font-size: 20px;
     font-weight: 700;
     text-align: left;
     color: #262626;
 }
-.courses{
+
+.courses {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.courses li{
+
+.courses li {
     font-size: 18px;
     padding: 2%;
 }
-.fees{
+
+.fees {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.fees p{
+
+.fees p {
     font-size: 15px;
     color: #8a8a8a;
 }
-.ranking{
+
+.ranking {
     color: #8a8a8a !important;
     font-size: 18px !important;
     text-align: center !important;
 }
-.college_website{
+
+.college_website {
     font-size: 18px !important;
     text-align: center !important;
 }
-.college_website a{
+
+.college_website a {
     color: #c39335;
 }
-.college_website a:hover{
+
+.college_website a:hover {
     color: #e1c99a;
 }
 
-
-.database-cards{
+.database-cards {
     width: 90%;
     margin: auto;
     overflow: hidden;
@@ -161,20 +188,25 @@
     /* visibility: hidden; */
     height: 0;
 }
-.database-item{
+
+.database-item {
     border: 1px solid #c39335;
     width: 90%;
     margin-top: 5%;
     text-align: center;
     border-radius: 10px;
 }
-.database-item img{
+
+.database-item img {
     width: 100%;
+    height: 280px;
 }
-.show-cards{
+
+.show-cards {
     /* visibility: visible; */
     height: 100%;
 }
-.remove-cards{
+
+.remove-cards {
     display: none;
 }
