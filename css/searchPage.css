@@ -100,16 +100,16 @@
     border: 1px solid #c39335;
     border-radius: 10px;
 }
-.item img{
+.item img, .database-item img{
     border-radius: 10px;
 }
-.item h3{
+.item h3 ,.database-item h3{
     padding: 2%;
     font-size: 30px;
     color: #c39335;
     border-bottom: 2px solid #c39335;
 }
-.item p{
+.item p,.database-item p{
     padding: 2%;
     font-size: 20px;
     font-weight: 700;
@@ -149,4 +149,32 @@
 }
 .college_website a:hover{
     color: #e1c99a;
+}
+
+
+.database-cards{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* visibility: hidden; */
+    height: 0;
+}
+.database-item{
+    border: 1px solid #c39335;
+    width: 90%;
+    margin-top: 5%;
+    text-align: center;
+    border-radius: 10px;
+}
+.database-item img{
+    width: 100%;
+}
+.show-cards{
+    /* visibility: visible; */
+    height: 100%;
+}
+.remove-cards{
+    display: none;
 }
