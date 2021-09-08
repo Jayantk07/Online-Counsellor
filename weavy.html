@@ -7,8 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://localhost:44323/javascript/weavy.min.js"></script>
+    <script src="https://{weavyurl}/javascript/weavy.min.js"></script>
+    
     <script>
+<<<<<<< HEAD
+    
+        $(function() {
+        
+            var weavy = new Weavy();
+            var space = weavy.space({ key: "global"});
+            var messenger = space.app({ key: "messenger", type: "messenger", container: "#messenger-container", open: false});
+    
+            $(document).on("click", ".toggle-messenger", function() {             
+=======
         var weavy = new Weavy();
     </script>
     <script>
@@ -26,6 +37,7 @@
             });
 
             $(document).on("click", ".toggle-messenger", function() {
+>>>>>>> b5ef403611dc0bec7c5ca1e0ee9a1461bc312118
                 messenger.toggle();
                 $("#messaging").toggleClass("open");
             });
