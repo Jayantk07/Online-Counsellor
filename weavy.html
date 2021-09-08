@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://localhost:44323/javascript/weavy.min.js"></script>
+    <script src="https://{weavyurl}/javascript/weavy.min.js"></script>
+    
     <script>
-        $(function () {
-
+    
+        $(function() {
+        
             var weavy = new Weavy();
-            var space = weavy.space({ key: "global" });
-            var messenger = space.app({ key: "messenger", type: "messenger", container: "#messenger-container", open: false });
-
-            $(document).on("click", ".toggle-messenger", function () {
+            var space = weavy.space({ key: "global"});
+            var messenger = space.app({ key: "messenger", type: "messenger", container: "#messenger-container", open: false});
+    
+            $(document).on("click", ".toggle-messenger", function() {             
                 messenger.toggle();
                 $("#messenger-container").toggleClass("open");
             });

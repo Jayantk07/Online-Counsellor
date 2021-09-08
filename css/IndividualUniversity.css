@@ -28,6 +28,8 @@
 .hero-img{
     overflow: hidden;
     border-radius: 15px;
+    height: 350px;
+    width: 500px;
 }
 .hero-img img{
     border-radius: 15px;
