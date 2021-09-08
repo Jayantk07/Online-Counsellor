@@ -120,7 +120,8 @@ function courseFilter($query)
                         <span>&#x20b9 <?php echo $row['fees'] ?></span>
                     </div>
                     <p class="ranking">Rating : <?php echo $row['rating'] ?> <i class="fas fa-star"></i></p>
-                    <p class="college_website">For more details visit: <a href="<?php echo $row['clg_url'] ?>"><?php echo $row['clg_url'] ?></a></p>
+                    <p class="college_website">For more details <a href="IndividualUniversity.php?id=<?php echo $row["id"];?>">Click Here</a> </p>
+                    <!-- <p class="college_website">For more details visit: <a href="<?php echo $row['clg_url'] ?>"><?php echo $row['clg_url'] ?></a></p> -->
             </div>
         <?php endwhile; ?>
     </div>

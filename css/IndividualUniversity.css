@@ -1,71 +1,83 @@
-.college-container{
+.college-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 5%;
 }
-.image{
+
+.image {
     overflow: hidden;
     border-radius: 15px;
 }
-.image img{
+
+.image img {
     border-radius: 15px;
     transition: all 0.5s ease-in-out;
 }
-.image img:hover{
+
+.image img:hover {
     transform: scale(1.1);
 }
-.college-name{
+
+.college-name {
     width: 50%;
     font-size: 35px;
     font-weight: 900;
     color: #c39335;
 }
 
-.hero-text{
+.hero-text {
     margin: 0 10% 0 0;
 }
-.hero-img{
+
+.hero-img {
     overflow: hidden;
     border-radius: 15px;
 }
-.hero-img img{
+
+.hero-img img {
     border-radius: 15px;
     transition: all 0.5s ease-in-out;
 }
-.hero-img img:hover{
+
+.hero-img img:hover {
     transform: scale(1.1);
 }
 
-.info-text p, .uni-text p{
+.info-text p,
+.uni-text p {
     margin-top: 2%;
     text-align: center;
 }
-.uni-text{
+
+.uni-text {
     margin-right: 5%;
     margin-top: 5%;
 }
-.uni-img img{
+
+.uni-img img {
     width: 500px;
 }
 
-.college-link{
+.college-link {
     margin-top: 5%;
     text-align: center;
     font-size: 25px;
 }
+
 .college-link a {
     color: #c39335;
 }
 
 @media screen and (max-width: 900px) {
-    .university{
+    .university {
         margin-top: 40%;
         margin-bottom: 20%;
     }
 }
+
 @media screen and (max-width: 600px) {
-    .hero-text{
+    .hero-text {
         margin-right: 0;
     }
 }

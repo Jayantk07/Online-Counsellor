@@ -1,3 +1,32 @@
+<?php 
+
+    include "database.php";
+
+    $name='';
+    $course='';
+    $stream1='';
+    $fees='';
+    $rating='';
+    $clg_url='';
+    $image_url='';
+
+    $id=$_GET["id"];
+
+    $res=mysqli_query($link, "select * from university where id=$id");
+    while($row=mysqli_fetch_array($res))
+    {
+        $name=$row["name"];
+        $course=$row["course"];
+        $stream1=$row["stream1"];
+        $fees=$row["fees"];
+        $rating=$row["rating"];
+        $clg_url=$row["clg_url"];
+        $image_url=$row["image_url"];
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,10 +67,10 @@
 
     <section class="hero" id="home">
         <div class="hero-text">
-            <h3>KJ Somaiya Insitute Of Engineering and Information Technology</h3>
+            <h3><?php echo $name ?></h3>
         </div>
         <div class="hero-img">
-            <img src="https://images.unsplash.com/photo-1595113229230-5f285a65dd18?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGNvbGxlZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Counsellor">
+            <img src="<?php echo $image_url ?>" alt="Counsellor">
         </div>
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
@@ -55,19 +84,19 @@
             <img src="./images/info_img.svg" alt="Info">
         </div>
         <div class="info-text">
-            <h3>Courses Offered</h3>
-            <p>Science, Arts and Commerce</p>
+            <h3>Course Offered</h3>
+            <p><?php echo $course ?></p>
         </div>
     </section>
     <section class="university">
         <div class="uni-text">
             <h3>Stream</h3>
-            <p>B.E, B.Tech</p>
+            <p><?php echo $stream1 ?></p>
             <h3>Fees</h3>
-            <p>&#x20b9 150</p>
+            <p>&#x20b9 <?php echo $fees ?></p>
             <h3>Rating</h3>
-            <p>10/10</p>
-            <p class="college-link">For more details, please visit: <a href="https://kjsieit.somaiya.edu.in/en" target="_blank">kjsieit.somaiya.edu.in</a></p>
+            <p><?php echo $rating ?> / 10 <i class="fas fa-star"></i></p>
+            <p class="college-link">For more details, please visit: <a href="<?php echo $clg_url ?>" target="_blank"><?php echo $clg_url ?></a></p>
         </div>
         <div class="uni-img">
             <img src="./images/stream.svg" alt="Search">
