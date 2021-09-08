@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+</head>
+<style>
+    #messenger-container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        transition: transform, opacity;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        right: 0;
+        width: 20rem;
+        transform: translateX(20rem);
+        pointer-events: none;
+        height: 100px;
+    }
+    
+    #messenger-container.open {
+        transform: none;
+        border-left: 1px solid #ccc;
+    }
+</style>
+
+<body>
+    <div id="messenger-container">
+        <button class="toggle-messenger">Toggle Messenger</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://localhost:44326/javascript/weavy.min.js"></script>
+    <script>
+        $(function() {
+            var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1NDYxMiIsIm5hbWUiOiJUZXN0bmFtZSIsImV4cCI6MTYzMDA1MDE4OCwiaXNzIjoiZW50ZXIteW91ci1jbGllbnQtaWQiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20ifQ.rkKIZPt_EbyJY0GrVpIoMZQcWzVulVMtAOXyk2Hvn_4";
+            var weavy = new Weavy({
+                jwt: token
+            });
+            var space = weavy.space({
+                key: "global"
+            });
+            var messenger = space.app({
+                key: "messenger",
+                type: "messenger",
+                container: "#messenger-container",
+                open: false
+            });
+            $(document).on("click", ".toggle-messenger", function() {
+                messenger.toggle();
+                $("#messenger-container").toggleClass("open");
+            });
+        });
+    </script>
+</body>
+
+</html>

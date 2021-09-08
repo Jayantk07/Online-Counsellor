@@ -9,21 +9,59 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://localhost:44323/javascript/weavy.min.js"></script>
     <script>
-        $(function () {
+        var weavy = new Weavy();
+    </script>
+    <script>
+        $(function() {
 
             var weavy = new Weavy();
-            var space = weavy.space({ key: "global" });
-            var messenger = space.app({ key: "messenger", type: "messenger", container: "#messenger-container", open: false });
+            var space = weavy.space({
+                key: "global"
+            });
+            var messenger = space.app({
+                key: "Mymessenger",
+                type: "messenger",
+                container: "#messaging",
+                open: false
+            });
 
-            $(document).on("click", ".toggle-messenger", function () {
+            $(document).on("click", ".toggle-messenger", function() {
                 messenger.toggle();
-                $("#messenger-container").toggleClass("open");
+                $("#messaging").toggleClass("open");
             });
         });
     </script>
+
+    <script>
+        var jwt = "{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZW1vdXNlciIsIm5hbWUiOiJEZW1vIFVzZXIiLCJleHAiOjI1MTYyMzkwMjIsImlzcyI6IiMjIyMgWU9VUiBDTElFTlQgSUQgIyMjIyIsImRpciI6ImRlbW8tZGlyIiwiZW1haWwiOiJkZW1vQHVzZXIuY29tIiwidXNlcm5hbWUiOiJkZW1vIn0.BZFMbHQsinFfs-wva0Y_BoxNASFTejl0eROYxei3No0}";
+        var weavy = new Weavy({
+            jwt: jwt
+        });
+        var space = weavy.space({
+            key: "demo"
+        });
+        space.app({
+            key: "posts-demo",
+            type: "posts",
+            container: "#weavy-feeds"
+        });
+    </script>
+
+
+    <script>
+        var global = weavy.space({
+            key: "ecc90e4a-36b5-481c-a75f-661b6e233828"
+        });
+        global.app({
+            key: "messenger",
+            type: "messenger",
+            container: "#messenger"
+        });
+    </script>
+
 </head>
 <style>
-    #messenger-container {
+    #messaging {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -38,8 +76,8 @@
         pointer-events: none;
         height: 100%;
     }
-
-    #messenger-container.open {
+    
+    #messaging.open {
         transform: none;
         border-left: 1px solid #ccc;
     }
@@ -47,8 +85,10 @@
 
 <body>
     Hello World!
-    <div id="messenger-container"></div>
+    <div id="messaging"></div>
     <button class="toggle-messenger">Toggle Messenger</button>
+
+    <div id="weavy-feeds"></div>
 
 
 
